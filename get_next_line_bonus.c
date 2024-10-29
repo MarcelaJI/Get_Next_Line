@@ -18,7 +18,7 @@ char	*get_next_line(int fd)
 	char		*holder;
 	int			bytes;
 
-	if (fd < 0)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	holder = NULL;
 	bytes = 0;
